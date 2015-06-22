@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/stic_editor_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/relative" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/apply_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/nrml_button_draw"
+                android:padding="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Cancel"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/nrml_button_draw"
+                android:padding="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="Apply"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/eraser_bar_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/seek_eraser_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Eraser Size"
+                android:textColor="#ff0000" />
+
+            <SeekBar
+                android:id="@+id/ereaser_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/seek_eraser_text"
+                android:max="80"
+                android:maxHeight="4dp"
+                android:progressDrawable="@drawable/seek_progress"
+                android:thumb="@drawable/seekthumb" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cursor_offset_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/cursor_offset_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="Eraser Offset"
+                android:textColor="#ff0000" />
+
+            <SeekBar
+                android:id="@+id/cursor_offset"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/cursor_offset_text"
+                android:max="300"
+                android:maxHeight="4dp"
+                android:progressDrawable="@drawable/seek_progress"
+                android:thumb="@drawable/seekthumb" />
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/color_similarity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="600"
+            android:maxHeight="4dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linearScrollLayout_orientation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/rotate_anticlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/switcher_rotationleft" >
+                </ImageButton>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/rotate_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/switcher_rotationright" >
+                </ImageButton>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/flip_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/yaxis" >
+                </ImageButton>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/flip_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/xaxis" >
+                </ImageButton>
+            </LinearLayout>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/option_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/eraser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/erase" />
+
+                <ImageButton
+                    android:id="@+id/splash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/splash" />
+
+                <ImageButton
+                    android:id="@+id/light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/light" />
+
+                <ImageButton
+                    android:id="@+id/orientation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/orientation" />
+
+                <ImageButton
+                    android:id="@+id/save_sticker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/save2" />
+
+                <ImageButton
+                    android:id="@+id/undo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/undo" />
+
+                <ImageButton
+                    android:id="@+id/redo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_button_draw"
+                    android:src="@drawable/redo" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

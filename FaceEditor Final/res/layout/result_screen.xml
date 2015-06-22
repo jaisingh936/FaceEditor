@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/result_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/image_select_draw"
+            android:src="@drawable/back" />
+
+        <!--
+             <ImageButton
+            android:id="@+id/google_plus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/image_select_draw"
+            android:src="@drawable/googleplus" />
+        -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <com.google.android.gms.plus.PlusOneButton
+                xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus"
+                android:id="@+id/plus_one_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                plus:size="standard" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/rate_app"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/image_select_draw"
+            android:src="@drawable/rate" />
+
+        <ImageButton
+            android:id="@+id/more_app"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/image_select_draw"
+            android:src="@drawable/moreapp" />
+
+        <ImageButton
+            android:id="@+id/save_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/image_select_draw"
+            android:src="@drawable/save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/watsapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/small_button_draw"
+                android:src="@drawable/whatsapp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="watsapp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/small_button_draw"
+                android:src="@drawable/fb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="facebook"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/small_button_draw"
+                android:src="@drawable/insta" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="instagram"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/small_button_draw"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="more"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
